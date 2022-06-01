@@ -123,14 +123,8 @@ describe('TodoList', () => {
     const todoList = new TodoList()
     todoList.create('buy ginger')
     // execute
-    const result = todoList.shift(1)
+    const result = todoList.removeItemByID(1)
     // verify
-    const removedItem = {
-      id: 1,
-      textDescription: 'buy ginger',
-      isComplete: false
-    }
-
-    expect(result).toEqual('removedItem')
+    expect(result).toEqual()
   })
 })

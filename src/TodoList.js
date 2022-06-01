@@ -77,10 +77,15 @@ class TodoList {
     }
   }
 
-  shift(itemID) {
+  removeItemByID() {
+    
+  }
+
+  pop(itemID) {
     const item = this.item.find((item) => item.id === itemID)
     if (item !== undefined) {
-      this.items.shift(0)
+      this.items.pop()
+      return item
     }
   }
 }
